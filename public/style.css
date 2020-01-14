@@ -1,0 +1,523 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --background_color: rgb(240, 207, 173);
+    --menu_background_color: #116466;
+    --menu_background_light_color: rgb(23, 194, 197);
+}
+
+body {
+    background-color: var(--background_color);
+    padding: 0.5rem;
+    /* background-image: url('mout.jpg'); */
+}
+
+.slideshow {
+    background-color: rgb(164, 214, 230);
+    position: relative;
+    width: 100%;
+    height: 250px;
+    visibility: hidden;
+}
+
+
+/* *********************** HOME **************************/
+
+.main-content {
+    height: 100%;
+    padding: 3%;
+    margin: 0%;
+    position: relative;
+}
+
+.main-content::after {
+    content: "";
+    background-image: url('Galerie/home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.main-content .clearfix {
+    overflow: auto;
+}
+
+.main-content ol {
+    padding-left: 20px;
+}
+
+.main-content aside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.main-content .my-fam-img {
+    float: right;
+    width: 15rem;
+    height: 15rem;
+    margin-left: 1%;
+}
+
+.portfolio {
+    margin-top: 1%;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.portfolio img {
+    display: inline-block;
+    width: 100%;
+}
+
+
+/* *********************** HOME **************************/
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    justify-content: space-evenly;
+    padding: 2%;
+    margin: 0%;
+    position: relative;
+}
+
+.grid-content::after {
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.grid-item {
+    place-self: center;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    font-size: 1.1em;
+}
+
+.grid-item .fa {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.grid-item>button {
+    margin-top: auto;
+    background: teal;
+    color: white;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+}
+
+.grid-item>button:hover {
+    background: rgba(0, 128, 128, 0.699);
+    font-size: 1.6em;
+}
+
+
+/* *********************** TRANSPORT **************************/
+
+.transport-content::after {
+    background-image: url('Galerie/road-trip.jpg');
+}
+
+.ride {
+    background: rgba(39, 155, 155, 0.76);
+    border: 2px rgb(3, 68, 52) dotted;
+}
+
+.ride:nth-of-type(2n) {
+    background: rgba(53, 214, 214, 0.76);
+    border: 2px rgb(3, 68, 52) dotted;
+}
+
+.ride:last-child {
+    justify-content: center;
+}
+
+.ride:last-child>button {
+    margin: 0em;
+}
+
+.ride .fa-chevron-right {
+    font-size: 0.8em;
+}
+
+.ride .fa-map-marker {
+    vertical-align: text-top;
+}
+
+
+/* *********************** TRANSPORT **************************/
+
+
+/* *********************** GIFTS **************************/
+
+.gift-content::after {
+    background-image: url('Galerie/1.jpg');
+}
+
+.gift {
+    background: rgba(39, 155, 155, 0.76);
+    border: 2px rgb(3, 68, 52) dotted;
+}
+
+.gift:nth-child(2n) {
+    background: rgba(53, 214, 214, 0.76);
+    border: 2px rgb(3, 68, 52) dotted;
+}
+
+.gift .fa {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.check-list {
+    padding: 2%;
+    text-align: center;
+}
+
+.check-list,
+.check-list tr td {
+    background-color: rgba(93, 255, 255, 0.76);
+    border: solid 1px black;
+}
+
+.check-list tr td:nth-of-type(n) {
+    background-color: rgb(196, 222, 135);
+}
+
+.check-list tr td:nth-of-type(2n) {
+    background-color: burlywood;
+}
+
+
+/* *********************** GIFTS **************************/
+
+
+/* *********************** MEETINGS **************************/
+
+.meeting-content::after {
+    background-image: url('Galerie/rest.jpg');
+}
+
+.meet {
+    background: rgba(243, 189, 119, 0.836);
+    border: 2px rgb(117, 46, 4) dotted;
+}
+
+.meet:nth-child(2n) {
+    background: rgba(238, 201, 153, 0.836);
+    border: 2px rgb(117, 46, 4) dotted;
+}
+
+.meet>button {
+    background: rgb(190, 79, 14);
+}
+
+
+/* *********************** MEETINGS **************************/
+
+
+/* *********************** MOOVIES **************************/
+
+.movie-content {
+    grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+}
+
+.movie-content::after {
+    background-image: url('Galerie/1.jpg');
+}
+
+.movie {
+    width: 500px;
+    height: 350px;
+    background: rgba(39, 155, 155, 0.76);
+    border: 2px rgb(3, 68, 52) dotted;
+    text-align: center;
+}
+
+.trailer {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* *********************** MOOVIES **************************/
+
+
+/* *********************** FOTO FIFURE**************************/
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2%;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 2%;
+    text-align: center;
+    background-color: rgba(255, 228, 196, 0.671);
+}
+
+.fig-img {
+    max-width: 250px;
+    max-height: 250px;
+    border: 1px rgb(175, 101, 10) dotted;
+}
+
+.fig-img:hover {
+    margin: 20px;
+    transform: scale(1.2);
+    transition: ease-in-out 250ms;
+    transition-delay: 0.2s;
+}
+
+.polaroid {
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 150px;
+    max-height: 250px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+
+.polaroid .polar-img {
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 150px;
+    max-height: 200px;
+}
+
+.polaroid .container {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+/* *********************** FOTO **************************/
+
+#footer {
+    position: relative;
+    border-radius: 2.5px;
+    background-color: rgba(110, 255, 248, 0.24);
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .menu {
+        position: relative;
+        font-size: 15px;
+        border-bottom-left-radius: 8px;
+    }
+    .menu ul {
+        list-style: none;
+        position: relative;
+    }
+    .menu a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        color: #fff;
+        background-color: var(--menu_background_color);
+        height: 50px;
+        margin: 0.3%;
+        padding: 1%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: ease-in-out 250ms;
+    }
+    .menu a:hover,
+    .menu a:active {
+        background-color: var(--menu_background_light_color);
+        height: 70px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        animation-name: example;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes example {
+        50% {
+            background-color: rgb(23, 194, 197);
+        }
+        50% {
+            background-color: #116466;
+        }
+    }
+    .menu .fa {
+        margin-left: 2%;
+        margin-right: 3%;
+    }
+    .menu .fa-bars {
+        font-size: 2em;
+        margin: auto;
+    }
+    .menu .fa-bars {
+        font-size: 2em;
+        margin: auto;
+    }
+    .dropdown1 .drop-hide {
+        display: none;
+    }
+    .dropdown1:hover .drop-hide {
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown1:hover .dropdown2 ul {
+        display: none;
+    }
+    .dropdown1:hover .dropdown2:hover ul {
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+        padding: 0%;
+    }
+    .dropdown2 ul,
+    .dropdown2 ul li:last-child a {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    /* HOME */
+    .main-content .my-fam-img {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    /* MOVIES */
+    .movie-content {
+        grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    }
+    .movie {
+        width: 300px;
+        height: 350px;
+    }
+    .trailer {
+        width: 280px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 700px) {
+    .menu {
+        position: sticky;
+        z-index: 5;
+        width: 100%;
+    }
+    .menu ul {
+        list-style: none;
+        position: relative;
+        width: 100%;
+    }
+    .menu a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 10%;
+        color: #fff;
+        background-color: var(--menu_background_color);
+        height: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: ease-in-out 250ms;
+    }
+    .menu a:hover {
+        background-color: var(--menu_background_light_color);
+        height: 65px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        animation-name: example;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes example {
+        50% {
+            background-color: rgb(23, 194, 197);
+        }
+        50% {
+            background-color: #116466;
+        }
+    }
+    .menu .fa {
+        margin-left: 2%;
+        margin-right: 5%;
+    }
+    .dropdown1 li {
+        width: 100%;
+    }
+    .dropdown1 {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--menu_background_color);
+        height: 40px;
+    }
+    .dropdown1 .mobile-menu {
+        background-color: pink;
+        display: none;
+    }
+    .dropdown2 ul {
+        background-color: var(--menu_background_color);
+        position: relative;
+        display: none;
+    }
+    .dropdown2:hover ul {
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+    }
+    .dropdown2 ul,
+    .dropdown2 ul li:last-child a {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    .content-container {
+        margin-top: 0%;
+        padding: 3%;
+        background-color: rgb(52, 170, 170);
+        min-height: 500px;
+    }
+}
+
+#active {
+    background-color: var(--menu_background_light_color);
+}
