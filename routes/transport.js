@@ -40,7 +40,7 @@ router.post('/', function(req, res) {
         fs.writeFileSync(path, text);
     }
 
-    res.redirect('transports')
+    res.render('transports/submitted')
 
     // const boxInfo = new BoxInfo({
     //     departure: req.body.departure,

@@ -1,9 +1,33 @@
-<div class="content-container">
-    <h2>New Transport</h2>
-    <br>
-    <form action="/transports" method="POST">
-        <%- include('_form_fields') %>
-            <a href="/transports" id="cancel">Cancel</a>
-            <button type="submit" id="create">Create</button>
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <base href="http://127.0.0.1:5500/" target="_blank"> -->
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Family Management App</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+        <%- include('../partials/menu.ejs') %>
+
+            <div class="content-container">
+                <h2>New Transport</h2>
+                <br>
+                <form action="/transports" method="POST">
+                    <%- include('_form_fields') %>
+                        <a href="/transports" id="cancel">Cancel</a>
+                        <button type="submit" id="create">Create</button>
+                </form>
+            </div>
+
+            <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

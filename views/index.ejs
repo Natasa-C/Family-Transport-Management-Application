@@ -1,18 +1,42 @@
-<div class="content-container">
-    <section class="main-content .clearfix">
-        <h2><span style="color: #116466;">Family</span> </h2><br>
-        <img class="my-fam-img" src="../public/galerie/dog-fam.jpg" alt="picture with my family">
-        <p>The basic connection between family will always be love. Remind your parents, siblings, cousins, children, or other of this with the following quotes.</p>
-        <br>
-        <ol id="quotes">
-            <li>“The most important thing in the world is family and love.” –John Wooden</li>
-            <li>“Nothing is better than going home to family and eating good food and relaxing.” –Irina Shayk</li>
-            <li>“To us, family means putting your arms around each other and being there.” –Barbara Bush</li>
-            <li>“In family life, love is the oil that eases friction, the cement that binds closer together, and the music that brings harmony.” –Friedrich Nietzsche</li>
-            <li>“Other things may change us, but we start and end with the family.” –Anthony Brandt</li>
-            <li>“Having somewhere to go is home. Having someone to love is family. And having both is a blessing.”
-            </li>
-            <li>“Being a family means you are a part of something very wonderful. It means you will love and be loved for the rest of your life.” –Lisa Weed</li>
-        </ol>
-    </section>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <base href="http://127.0.0.1:5500/" target="_blank"> -->
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Family Management App</title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+        <%- include('./partials/menu.ejs') %>
+
+            <div class="content-container">
+                <section class="main-content .clearfix">
+                    <h2><span style="color: #116466;">Family</span> </h2><br>
+                    <img class="my-fam-img" src="/galerie/dog-fam.jpg" alt="picture with my family">
+                    <p>The basic connection between family will always be love. Remind your parents, siblings, cousins, children, or other of this with the following quotes.</p>
+                    <br>
+                    <ol id="quotes">
+                        <li>“The most important thing in the world is family and love.” –John Wooden</li>
+                        <li>“Nothing is better than going home to family and eating good food and relaxing.” –Irina Shayk</li>
+                        <li>“To us, family means putting your arms around each other and being there.” –Barbara Bush</li>
+                        <li>“In family life, love is the oil that eases friction, the cement that binds closer together, and the music that brings harmony.” –Friedrich Nietzsche</li>
+                        <li>“Other things may change us, but we start and end with the family.” –Anthony Brandt</li>
+                        <li>“Having somewhere to go is home. Having someone to love is family. And having both is a blessing.”
+                        </li>
+                        <li>“Being a family means you are a part of something very wonderful. It means you will love and be loved for the rest of your life.” –Lisa Weed</li>
+                    </ol>
+                </section>
+            </div>
+
+            <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
