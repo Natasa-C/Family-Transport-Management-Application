@@ -89,7 +89,7 @@ body {
 
 .grid-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
     justify-content: space-evenly;
     padding: 2%;
@@ -173,6 +173,14 @@ body {
 
 .ride .fa-map-marker {
     vertical-align: text-top;
+}
+
+.not-comeing {
+    display: none;
+}
+
+.comeing {
+    display: inline;
 }
 
 

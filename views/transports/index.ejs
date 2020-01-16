@@ -21,9 +21,35 @@
 
             <div class="content-container">
                 <main class="grid-content transport-content" id="content">
-                    <article id="add-content" class="grid-item ride center-button">
-                        <button id="add"><a href="/transports/new" id="go_to_new">Add Transport</a></button>
-                    </article>
+                    <% for (var i = 0; i < info.length; i++){ %>
+                        <article class="grid-item ride" id="box_number_<%= i %>">
+                            <h1><i class="fa fa-map-marker"></i>
+                                <%= info[i].departure %> <i class="fa fa-chevron-right"></i>
+                                    <%= info[i].arrival %>
+                            </h1><br>
+                            <p><i class="fa fa-calendar"></i>
+                                <%= info[i].date %>
+                            </p><br>
+                            <p><i class="fa fa-clock-o"></i>
+                                <%= info[i].time %>
+                            </p><br>
+                            <p><i class="fa fa-map-marker"></i>
+                                <%= info[i].from_location %>
+                            </p><br>
+                            <p><i class="fa fa-map-marker"></i>
+                                <%= info[i].to_location %>
+                            </p><br>
+                            <p><i class="fa fa-child"></i>
+                                <%= info[i].number_of_sits %>
+                            </p><br>
+                            <p><i class="fa fa-child"></i>Comeing: </p><br>
+                            <button id="button_number_<%= i %>">Add person</button>
+                        </article>
+                        <% } %>
+
+                            <article id="add-content" class="grid-item ride center-button">
+                                <button id="add"><a href="/transports/new" id="go_to_new">Add Transport</a></button>
+                            </article>
                 </main>
             </div>
 
