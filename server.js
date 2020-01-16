@@ -3,21 +3,32 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const async = require('async');
+const session = require("express-session");
 
 const MongoClient = require('mongodb').MongoClient;
 const url = process.env.mongo_host;
 
 const database_name = process.env.database_name;
 const transport_data_collection = process.env.transport_data_collection;
+const users_data_collection = process.env.users_data_collection;
 
-const indexRouter = require('./routes/index').router;
+const indexRouter = require('./routes/index');
 const transportRouterFunc = require('./routes/transport');
+const loginRouterFunc = require('./routes/login');
+const registerRouterFunc = require('./routes/register');
+const logoutRouterFunc = require('./routes/logout');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
 
+let mySession = { loggedIn: false };
 
 async.auto({
     mongo_connect: async function() {
@@ -34,17 +45,8 @@ async.auto({
         app.db = await client.db(database_name);
         app.client = await client;
         app.db[transport_data_collection] = await app.db.collection(transport_data_collection);
+        app.db[users_data_collection] = await app.db.collection(users_data_collection);
         app.db.config = await app.db.collection("config");
-
-        // try {
-        //     await app.db[transport_data_collection].createIndex({ id: 1 });
-        //     console.log('Successfully created index on id field.');
-
-        // }
-        // catch (error) {
-        //     console.error(`Failed to create index: ${error}`);
-        //     return 0;
-        // }
 
         return 1;
     },
@@ -53,8 +55,16 @@ async.auto({
         if (results.mongo_connect == 0)
             return 0;
 
-        app.use('/', indexRouter);
-        app.use('/transports', transportRouterFunc(app, transport_data_collection));
+        app.use('/index', checkAuthentificated, indexRouter);
+        app.use('/transports', checkAuthentificated, transportRouterFunc(app, transport_data_collection));
+        app.use('/login', checkNotAuthentificated, loginRouterFunc(app, users_data_collection, mySession));
+        app.use('/register', checkNotAuthentificated, registerRouterFunc(app, users_data_collection));
+        app.use('/logout', checkAuthentificated, logoutRouterFunc(mySession));
+
+        app.use((req, res) => {
+            res.status(404);
+            res.render('404/404.ejs', { style: '404.css', scriptJs: '' });
+        })
 
         return 1;
     }],
@@ -82,3 +92,17 @@ async.auto({
     console.log('err = ', err);
     console.log('Finished everything!');
 });
+
+function checkAuthentificated(req, res, next) {
+    if (mySession.loggedIn) {
+        return next();
+    } else
+        res.redirect('/login');
+}
+
+function checkNotAuthentificated(req, res, next) {
+    if (mySession.loggedIn) {
+        return res.render("inSession");
+    } else
+        next();
+}

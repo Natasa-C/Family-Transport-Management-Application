@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body:before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(./galerie/road-trip.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.contact_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    padding: 80px 40px;
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.contact_form h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact_form p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.contact_form input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact_form input[type=text],
+.contact_form input[type=email],
+.contact_form input[type=password] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 35px;
+    color: #fff;
+    color-adjust: #fff;
+    font-size: 15px;
+}
+
+#submit {
+    width: 50%;
+    height: 30px;
+    color: #fff;
+    font-size: 15px;
+    background: teal;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin-left: 22%;
+    margin-top: 10%;
+}
+
+input[type=checkbox] {
+    width: 25%;
+}
+
+#register {
+    margin-left: 35%;
+    text-decoration: none;
+    color: white;
+}
