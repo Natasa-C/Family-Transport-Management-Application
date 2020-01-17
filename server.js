@@ -17,6 +17,11 @@ const transportRouterFunc = require('./routes/transport');
 const loginRouterFunc = require('./routes/login');
 const registerRouterFunc = require('./routes/register');
 const logoutRouterFunc = require('./routes/logout');
+const giftsRouter = require('./routes/gifts');
+const meetingsRouter = require('./routes/meetings');
+const moviesRouter = require('./routes/movies');
+const photoRouter = require('./routes/photo');
+const polaroidRouter = require('./routes/polaroid');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -59,6 +64,11 @@ async.auto({
         app.use('/transports', checkAuthentificated, transportRouterFunc(app, transport_data_collection));
         app.use('/login', checkNotAuthentificated, loginRouterFunc(app, users_data_collection, mySession));
         app.use('/register', checkNotAuthentificated, registerRouterFunc(app, users_data_collection));
+        app.use('/meetings', checkAuthentificated, meetingsRouter);
+        app.use('/movies', checkAuthentificated, moviesRouter);
+        app.use('/gifts', checkAuthentificated, giftsRouter);
+        app.use('/photo', checkAuthentificated, photoRouter);
+        app.use('/polaroid', checkAuthentificated, polaroidRouter);
         app.use('/logout', checkAuthentificated, logoutRouterFunc(mySession));
 
         app.use((req, res) => {

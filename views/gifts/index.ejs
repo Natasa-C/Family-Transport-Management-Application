@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <base href="http://127.0.0.1:5500/" target="_blank"> -->
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="/utility_functions.js"></script>
+
+    <title>Family Management App</title>
+</head>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+        <%- include('../partials/menu.ejs') %>
+
+            <div class="content-container">
+                <main class="grid-content gift-content">
+                    <article class="grid-item gift">
+                        <h1><i class="fa fa-check-square"></i>Lista Irinei</h1>
+                        <br>
+                        <table class="check-list">
+                            <tr>
+                                <th>Taken</th>
+                                <th>Item</th>
+                            </tr>
+                            <tr>
+                                <td>no</td>
+                                <td>O lampa</td>
+                            </tr>
+                            <tr>
+                                <td>yes</td>
+                                <td>Gogosi</td>
+                            </tr>
+                            <tr>
+                                <td>yes</td>
+                                <td>Flori</td>
+                            </tr>
+                        </table>
+
+                    </article>
+
+                    <article class="grid-item gift">
+                        <h1><i class="fa fa-check-square"></i>Lista lui Nicolae</h1>
+                        <br>
+                        <p>Checklist</p>
+                    </article>
+
+                    <article class="grid-item gift">
+                        <h1><i class="fa fa-check-square"></i>Lista Ancai</h1>
+                        <br>
+                        <p>Checklist</p>
+                    </article>
+
+                    <article class="grid-item gift">
+                        <h1><i class="fa fa-check-square"></i>Lista Anei</h1>
+                        <br>
+                        <p>Checklist</p>
+                    </article>
+
+                    <article class="grid-item gift">
+                        <h1><i class="fa fa-check-square"></i>Lista lui Marcel</h1>
+                        <br>
+                        <p>Checklist</p>
+                    </article>
+                </main>
+            </div>
+
+            <%- include('../partials/footer.ejs') %>
+
+
+
+</body>
+
+</html>
