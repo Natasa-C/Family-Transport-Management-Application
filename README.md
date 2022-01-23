@@ -1,6 +1,6 @@
 # Family-Management-Application
 
-#### Website for a family management app built as a project for the Web Techniques University course. The user interface was developed using MVC(Model View Controller) software design pattern. The application has sign up / login / logout functionalities and uses MongoDB to store information in local database.
+#### Website for a family transport management app built as a project for the Web Techniques University course. The application has sign up / login / logout functionalities and uses MongoDB to store information in local database. The user interface was developed using MVC(Model View Controller) software design pattern. 
 
 ### Run website locally from terminal:
 - clone repository
