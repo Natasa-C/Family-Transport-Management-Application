@@ -2,9 +2,6 @@
 
 #### Website for a family management app built as a project for the Web Techniques University course. The user interface was developed using MVC(Model View Controller) software design pattern. The application has sign up / login / logout functionalities and uses MongoDB to store information in local database.
 
-### Link
-[https://family-management-app.herokuapp.com/login](https://family-management-app.herokuapp.com/login)
-
 ### Run website locally from terminal:
 - clone repository
 - sudo systemctl start mongod
